@@ -71,26 +71,66 @@ body {
   }
 }
 
-.options{
+.options {
   position: relative;
+  visibility: hidden;
+  width: 25vw;
   margin-top: 15vh;
-  & .stone, .scissor , .paper{
+  height: 40vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  & .bigtriangle {
+    width: 0;
+    height: 0;
+    position: relative;
+    border-left: 22vh solid transparent;
+    border-right: 22vh solid transparent;
+    border-top: 22vh solid #000000A3;
+    z-index: 1;
+  }
+  & .childtriangle{
+    width: 0;
+    height: 0;
+    position: absolute;
+    border-left: 17vh solid transparent;
+    border-right: 17vh solid transparent;
+    border-top: 17vh solid #8CC461;
+    z-index: 2;
+    margin-bottom: 1vh;
+  }
+}
+.stone,
+  .scissor,
+  .paper {
     height: 12vh;
     width: 12vh;
     background-color: #fff;
     border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
   }
-  &.stone{
-    
-  }
-  &.scissor{
 
+  .stone {
+    position: absolute;
+    left: 0;
+    top:0;
+    border: #0074b6 solid 2vh;
   }
-  &.paper{
-
+  .scissor {
+    border: #bd00ff solid 2vh;
+    position: absolute;
+    top: 0;
+    right: 0;
   }
-}
-
+  .paper {
+    border: #ffd600 solid 2vh;
+    position: absolute;
+    bottom: 0;
+  }
 .rulesbox {
   border-radius: 13px;
   border: 7px solid #fff;
@@ -165,7 +205,7 @@ body {
 .buttons {
   position: absolute;
   bottom: 3vh;
-  right:3vh;
+  right: 3vh;
   & .btnrule {
     border-radius: 10px;
     border: 2px solid #fff;
@@ -177,7 +217,7 @@ body {
     font-weight: 600;
     line-height: normal;
     letter-spacing: 2.1px;
-    height:6vh;
+    height: 6vh;
     width: 22vh;
   }
 }
