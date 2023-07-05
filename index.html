@@ -1,57 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style.css" />
     <title>GAME</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <div class="dash">
-            <div class="heading">
-                <h1>ROCK </h1><h1>PAPER</h1> <h1>SCISSOR</h1>
-            </div>
-            <div class="scorecard">
-                <div class="compscore">
-                    <h3 class="scorename">COMPUTER </h3>
-                <h3 class="scorename">SCORE</h3>
-                    <h2>0</h2>
-                </div>
-                <div class="humscore">
-                    <h3 class="scorename">YOUR </h3>
-                <h3 class="scorename">SCORE</h3>
-                    <h2 
-                    >0</h2>
-                </div>
-            </div>
+      <div class="dash">
+        <div class="heading">
+          <h1>ROCK</h1>
+          <h1>PAPER</h1>
+          <h1>SCISSOR</h1>
         </div>
-        <div class="options">
-            <div class="stone"><img src="assets/icons8-fist-67 1.png" alt=""></div>
-            <div class="scissor"><img src="assets/17911 1.png" alt=""></div>
-            <div class="paper"><img src="assets/icons8-hand-64 1.png" alt=""></div>
-            <div class="bigtriangle">
-            </div>
-            <div class="childtriangle"> </div>
-            
+        <div class="scorecard">
+          <div class="compscore">
+            <h3 class="scorename">COMPUTER</h3>
+            <h3 class="scorename">SCORE</h3>
+            <h2>0</h2>
+          </div>
+          <div class="humscore">
+            <h3 class="scorename">YOUR</h3>
+            <h3 class="scorename">SCORE</h3>
+            <h2>0</h2>
+          </div>
         </div>
-    
+      </div>
+      <div class="options">
+        <div class="stone leftcor"></div>
+        <div class="scissor rightcor"></div>
+        <div class="paper bottommid"></div>
+        <div class="bigtriangle"></div>
+        <div class="childtriangle"></div>
+      </div>
+      <div class="result">
+        <div class="left">
+            <div class="topgreen leftcor">
+              <div class="midgreen">
+                <div class="lowgreen">
+                </div>
+              </div>
+            </div>
+            <div class="userselect selects stone" id="uss">
+          </div>
+        </div>
+        <div class="mid">
+          <h1>YOU WIN</h1>
+          <h2>AGAINST PC</h2>
+          <button class="btnplay">PLAY AGAIN</button>
+        </div>
+        <div class="right">
+            <div class="topgreen rightcor">
+                <div class="midgreen">
+                  <div class="lowgreen">
+                  </div>
+                </div>
+              </div>
+          <div class="pcselect selects scissor" id="pcs"></div>
+        </div>
+      </div>
     </div>
     <div class="rulesbox">
-        <div class="exit">
-            <h1>X</h1>
-        </div>
-        <h1>Game Rules</h1>
-        <ul>
-            <li>Rock beats scissors, scissors beat paper, and paper beats rock.</li>
-            <li>Agree ahead of time whether you’ll count off “rock, paper, scissors, shoot” or just “rock, paper, scissors.”</li>
-            <li>Use rock, paper, scissors to settle minor decisions or simply play to pass the time</li>
-            <li>If both players lay down the same hand, each player lays down another hand</li>
-        </ul>
+      <div class="exit">
+        <h1>X</h1>
+      </div>
+      <h1>Game Rules</h1>
+      <ul>
+        <li>Rock beats scissors, scissors beat paper, and paper beats rock.</li>
+        <li>
+          Agree ahead of time whether you’ll count off “rock, paper, scissors,
+          shoot” or just “rock, paper, scissors.”
+        </li>
+        <li>
+          Use rock, paper, scissors to settle minor decisions or simply play to
+          pass the time
+        </li>
+        <li>
+          If both players lay down the same hand, each player lays down another
+          hand
+        </li>
+      </ul>
     </div>
     <div class="buttons">
-        <button class="btnrule">RULES</button>
+      <button class="btnrule">RULES</button>
     </div>
-        <script src="script.js"></script>
-    </body>
-    </html>
+    <script src="script.js"></script>
+  </body>
+</html>
