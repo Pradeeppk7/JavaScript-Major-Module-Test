@@ -163,7 +163,7 @@ body {
   width: 18vw;
   padding: 2vh;
   right: 5vh;
-  visibility: hidden;
+  
   & h1 {
     color: #fff;
     font-size: 29px;
@@ -227,6 +227,7 @@ body {
   position: relative;
   height: 50vh;
   display: flex;
+  display: none;
   justify-content: space-around;
   align-items: center;
   width: 75vw;
