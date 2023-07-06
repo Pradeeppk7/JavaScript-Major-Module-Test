@@ -7,7 +7,6 @@ let pcscore = 0;
 let btnrule = document.getElementById('buttonrule');
 let rulebox = document.getElementById('ruleb');
 let exitrule = document.getElementById('exit');
-let exitedrule = document.getElementById('exited');
 let stoneus = document.getElementById('stone');
 let scissorus = document.getElementById('scissor');
 let paperus = document.getElementById('paper');

@@ -318,8 +318,8 @@ body {
   font-weight: 600;
   line-height: normal;
   letter-spacing: 1.7px;
-  top:5vh;
-  margin-left: 1.5vh ;
+  top: 5vh;
+  margin-left: 1.5vh;
 }
 .topgreen {
   z-index: -1;
@@ -373,14 +373,37 @@ body {
   }
 }
 
-.poster img{
+.poster img {
   margin-top: 10vh;
   height: 45vh;
-  border-radius:10vh;
+  border-radius: 10vh;
 }
-.captions{
+.captions {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  & h1 {
+    color: #fff;
+    text-align: center;
+    font-family: Roboto;
+    font-size: 91px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 9.1px;
+  }
+  & h3 {
+    color: #fff;
+    text-align: center;
+    font-family: Roboto;
+    font-size: 41px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 4.1px;
+  }
+  & button{
+    margin-top: 7vh;
+  }
 }

@@ -45,10 +45,23 @@
       </ul>
     </div>
     <div class="buttons">
-      <button onclick="RuleFunction()" class="btnrule" id="buttonrule">
+      <button onclick="RulebtnFunction()" class="btnrule" id="buttonrule">
         RULES
       </button>
     </div>
-    <script src="script.js"></script>
+    <script>
+      let exitedrule = document.getElementById('exited');
+      let rulebox = document.getElementById('ruleb');
+      exitedrule.addEventListener('click', () => {
+        rulebox.style.display = 'none';
+      });
+      function RulebtnFunction() {
+        if (rulebox.style.display === 'none') {
+          rulebox.style.display = 'flex';
+        } else {
+          rulebox.style.display = 'none';
+        }
+      }
+    </script>
   </body>
 </html>
