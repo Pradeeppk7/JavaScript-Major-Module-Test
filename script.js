@@ -1,6 +1,7 @@
 
-let uspicked = 0;
-let pcpicked = 0;
+
+let userscore = 0;
+let pcscore = 0;
 //stone =>0
 //scissor =>1
 //paper =>2
@@ -11,21 +12,50 @@ let stoneus = document.getElementById('stone');
 let scissorus = document.getElementById('scissor');
 let paperus = document.getElementById('paper');
 let options = document.getElementById('options');
-let result=document.getElementById('result');
+let result = document.getElementById('result');
+let userwon = document.getElementById('userwin');
+let pcwon = document.getElementById('pcwin');
+let resh1 = document.getElementById('whowon');
+let resh2 = document.getElementById('h2res');
+let btnagain = document.getElementById('playagain');
+let labelpc = document.getElementById('pcs');
+let labeluser = document.getElementById('uss');
+let humanscr = document.getElementById('humanscr');
+let aiscr = document.getElementById('aiscr');
+let btnend = document.getElementById('buttonendgame');
+
+function updateScore() {
+    aiscr.innerText = pcscore;
+    humanscr.innerText = userscore;
+}
 
 stoneus.addEventListener('click', () => {
     stonepicked();
     componentonclick();
+    updateScore()
 })
 
 scissorus.addEventListener('click', () => {
     scissorpicked();
     componentonclick();
+    updateScore()
 })
 
 paperus.addEventListener('click', () => {
     paperpicked();
     componentonclick();
+    updateScore()
+});
+
+btnagain.addEventListener('click', () => {
+    result.style.display = 'none';
+    options.style.display = "flex";
+    labelpc.classList.remove("stone");
+    labelpc.classList.remove("paper");
+    labelpc.classList.remove("scissor");
+    labeluser.classList.remove("stone");
+    labeluser.classList.remove("paper");
+    labeluser.classList.remove("scissor");
 })
 
 function componentonclick() {
@@ -34,7 +64,25 @@ function componentonclick() {
 }
 
 
-
+function userwins() {
+    userscore += 1;
+    userwon.style.display = 'flex';
+    pcwon.style.display = 'none';
+    resh1.innerText = "YOU WIN";
+}
+function pcwins() {
+    pcscore += 1;
+    userwon.style.display = 'none';
+    pcwon.style.display = 'flex';
+    resh1.innerText = "YOU LOST";
+}
+function tie() {
+    userwon.style.display = 'none';
+    pcwon.style.display = 'none';
+    resh1.innerText = "TIE UP";
+    resh2.innerText = "";
+    btnagain.innerText = "REPLAY";
+}
 function RuleFunction() {
     if (rulebox.style.display === "none") {
         rulebox.style.display = "flex";
@@ -49,42 +97,63 @@ exitrule.addEventListener('click', () => {
 })
 
 function stonepicked() {
+    labeluser.classList.add("stone");
     console.log("stone");
     pcpicked = randompicker();
     if (pcpicked === 0) {
         console.log("Tie");
+        labelpc.classList.add("stone");
+        tie();
     }
     else if (pcpicked===1) {
+        labelpc.classList.add("scissor");
         console.log("user wins");
+        userwins();
     }
     else {
         console.log("pc wins");
+        labelpc.classList.add("paper");
+        pcwins();
     }
 }
 function scissorpicked() {
+    labeluser.classList.add("scissor");
     console.log("scissor");
     pcpicked = randompicker();
     if (pcpicked === 0) {
         console.log("pc wins");
+        labelpc.classList.add("stone");
+        pcwins();
     }
     else if (pcpicked===1) {
         console.log("tie");
+        labelpc.classList.add("scissor");
+        tie();
     }
     else {
         console.log("user wins");
+        labelpc.classList.add("paper");
+        userwins();
     }
 }
 function paperpicked() {
+    labeluser.classList.add("paper");
     console.log("paper");
     pcpicked = randompicker();
     if (pcpicked === 0) {
         console.log("user wins");
+        labelpc.classList.add("stone");
+        userwins();
     }
     else if (pcpicked===1) {
         console.log("pc wins");
+        labelpc.classList.add("scissor");
+        pcwins();
     }
     else {
         console.log("tie");
+        labelpc.classList.add("paper");
+        tie();
     }
 }
 

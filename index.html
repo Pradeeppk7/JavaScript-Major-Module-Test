@@ -18,12 +18,12 @@
           <div class="compscore">
             <h3 class="scorename">COMPUTER</h3>
             <h3 class="scorename">SCORE</h3>
-            <h2>0</h2>
+            <h2 id="aiscr">0</h2>
           </div>
           <div class="humscore">
             <h3 class="scorename">YOUR</h3>
             <h3 class="scorename">SCORE</h3>
-            <h2>0</h2>
+            <h2 id="humanscr">0</h2>
           </div>
         </div>
       </div>
@@ -36,28 +36,30 @@
       </div>
       <div class="result" id="result">
         <div class="left">
+          <h2 class="pickh2">YOU PICKED</h2>
             <div class="topgreen leftcor" id="userwin">
               <div class="midgreen">
                 <div class="lowgreen">
                 </div>
               </div>
             </div>
-            <div class="userselect selects stone" id="uss">
+            <div class="userselect selects" id="uss">
           </div>
         </div>
         <div class="mid">
-          <h1>YOU WIN</h1>
-          <h2>AGAINST PC</h2>
-          <button class="btnplay">PLAY AGAIN</button>
+          <h1 id="whowon"></h1>
+          <h2 id="h2res">AGAINST PC</h2>
+          <button class="btnplay" id="playagain">PLAY AGAIN</button>
         </div>
         <div class="right">
+          <h2 class="pickh2">PC PICKED</h2>
             <div class="topgreen rightcor" id="pcwin">
                 <div class="midgreen">
                   <div class="lowgreen">
                   </div>
                 </div>
               </div>
-          <div class="pcselect selects scissor" id="pcs"></div>
+          <div class="pcselect selects" id="pcs"></div>
         </div>
       </div>
     </div>
@@ -84,6 +86,8 @@
       </ul>
     </div>
     <div class="buttons">
+      <button onclick="window.location.href ='resultpage.html';" class="btnrule" style="margin-right: 1vh;" id="buttonendgame">END GAME</button>
+    
       <button onclick="RuleFunction()" class="btnrule" id="buttonrule">RULES</button>
     </div>
     <script src="script.js"></script>
