@@ -4,6 +4,9 @@
   margin: 0;
   padding: 0;
   font-family: Roboto;
+  & button{
+    cursor: pointer;
+  }
 }
 body {
   background-color: #8cc461;
@@ -299,6 +302,12 @@ body {
   border: none;
   width: 20vh;
   margin-top: 2vh;
+  transition-duration: .2s;
+}
+
+#playagain:hover{
+  transform: scale(1.2);
+  transition-duration: .2s;
 }
 
 #userwin,
@@ -371,8 +380,13 @@ body {
     height: 6vh;
     width: 22vh;
   }
+  & button:hover{
+    transition-duration:.2s;
+    background-color:#fff;
+    color: #8cc461;
+    
+  }
 }
-
 .poster img {
   margin-top: 10vh;
   height: 45vh;
@@ -397,7 +411,7 @@ body {
     color: #fff;
     text-align: center;
     font-family: Roboto;
-    font-size: 41px;
+    font-size: 50px;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
@@ -405,5 +419,6 @@ body {
   }
   & button{
     margin-top: 7vh;
+    
   }
 }

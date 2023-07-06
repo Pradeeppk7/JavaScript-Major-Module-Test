@@ -92,6 +92,7 @@ function userwins() {
   userscore += 1;
   userwon.style.display = 'flex';
   pcwon.style.display = 'none';
+  btnagain.innerText = 'PLAY AGAIN';
   resh2.innerText = 'AGAINST PC';
   resh1.innerText = 'YOU WIN';
 }
@@ -99,6 +100,7 @@ function pcwins() {
   pcscore += 1;
   userwon.style.display = 'none';
   pcwon.style.display = 'flex';
+  btnagain.innerText = 'PLAY AGAIN';
   resh2.innerText = 'AGAINST PC';
   resh1.innerText = 'YOU LOST';
 }
